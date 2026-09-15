@@ -221,10 +221,15 @@ function PortfolioPage() {
                 <p className="mb-5 text-[11px] font-medium uppercase tracking-[0.2em] text-primary">06 / Contact</p>
                 <h2 className="max-w-[850px] font-display text-6xl leading-[.86] tracking-[-0.045em] md:text-8xl">Let&apos;s<br /><span className="italic">connect.</span></h2>
               </div>
-              <div className="max-w-[320px] lg:pb-2">
-                <a href="https://github.com/ishmeet2001" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-3 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[0.15em] transition-colors hover:border-primary hover:text-primary">
-                  GitHub <ArrowUpRight size={16} strokeWidth={1.5} />
-                </a>
+              <div className="max-w-[360px] lg:pb-2">
+                <div className="flex flex-col items-start gap-4">
+                  <a href="mailto:kaurishmeet861@gmail.com" className="group inline-flex items-center gap-3 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[0.15em] transition-colors hover:border-primary hover:text-primary">
+                    kaurishmeet861@gmail.com <ArrowUpRight size={16} strokeWidth={1.5} />
+                  </a>
+                  <a href="https://github.com/ishmeet2001" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-3 border-b border-foreground pb-2 text-xs font-semibold uppercase tracking-[0.15em] transition-colors hover:border-primary hover:text-primary">
+                    GitHub <ArrowUpRight size={16} strokeWidth={1.5} />
+                  </a>
+                </div>
               </div>
             </div>
 
