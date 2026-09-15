@@ -1,71 +1,87 @@
 export type Project = {
   name: string;
   description: string;
-  image: string;
-  imageAlt: string;
-  imageSource?: string;
+  stack: string[];
+  highlights: string[];
   index: string;
-  tone: 'clay' | 'sage' | 'sand' | 'ink' | 'rose' | 'ochre';
+  githubUrl?: string;
 };
 
 export const featuredProjects: Project[] = [
   {
     name: 'RiskLens',
     description:
-      'Exploitation-aware vulnerability prioritization using multiple vulnerability sources, time-aware feature engineering, ML ranking and classification, explainability, and API/cloud deployment.',
-    image: '/images/projects/risklens-placeholder.jpg',
-    imageAlt: 'RiskLens project visual placeholder',
+      'Prioritizes vulnerabilities by exploitation risk instead of severity score alone.',
+    stack: ['Python', 'BigQuery', 'SHAP', 'Cloud Run', 'NVD / CISA / EPSS'],
+    highlights: [
+      'Combines multiple vulnerability-intelligence sources',
+      'Uses time-aware features to reduce leakage',
+      'Adds explainability for security decision-making',
+    ],
     index: '01',
-    tone: 'clay',
   },
   {
-    name: 'Grocery Price Forecasting',
+    name: 'Avocado & Tomato Price Forecasting',
     description:
-      'Monthly Canadian avocado and tomato forecasting using historical prices, imports, exchange rates, fuel/oil, CPI, and weather, with Bronze/Silver/Gold processing and Airflow automation.',
-    image:
-      'https://raw.githubusercontent.com/ishmeet2001/price_prediction/main/price_prediction/model/output/avocado/xgboost/xgboost_vs_actual.png',
-    imageAlt: 'Avocado XGBoost models compared with actual values',
-    imageSource:
-      'ishmeet2001/price_prediction — price_prediction/model/output/avocado/xgboost/xgboost_vs_actual.png',
+      'Forecasts monthly Canadian produce prices using market and external signals.',
+    stack: ['Python', 'Airflow', 'XGBoost', 'SARIMA / SARIMAX', 'pandas'],
+    highlights: [
+      'Built Bronze / Silver / Gold data layers',
+      'Compared statistical and ML forecasting approaches',
+      'Added imports, FX, fuel, CPI and weather signals',
+    ],
     index: '02',
-    tone: 'sage',
+    githubUrl: 'https://github.com/ishmeet2001/price_prediction',
   },
   {
     name: 'AI Document Processing',
     description:
-      'Python workflow using LLM tool calling, Pydantic structured outputs, validation, SQLite persistence, retries, and automated tests.',
-    image: '/images/projects/ai-document-processing-placeholder.jpg',
-    imageAlt: 'AI Document Processing project visual placeholder',
+      'Turns messy invoice text into validated structured records and relational data.',
+    stack: ['Python', 'LangChain', 'Gemini', 'Pydantic', 'SQLite', 'pytest'],
+    highlights: [
+      'Structured extraction with schema validation',
+      'Tool calling with retry and failure handling',
+      'Automated tests for extraction and database logic',
+    ],
     index: '03',
-    tone: 'sand',
+    githubUrl: 'https://github.com/ishmeet2001/AI-Document-Processing-Pipeline',
   },
   {
     name: 'Multi-State Crime Analysis',
     description:
-      'ETL and analytics project harmonizing FBI/NIBRS-style crime datasets across five U.S. states from 2020–2024.',
-    image: '/images/projects/multi-state-crime-analysis-placeholder.jpg',
-    imageAlt: 'Multi-State Crime Analysis project visual placeholder',
+      'Harmonizes large public-safety datasets across five U.S. states for analysis.',
+    stack: ['Python', 'pandas', 'ETL', 'Data Quality', 'Analytics'],
+    highlights: [
+      'Processed roughly 1.45 GB of raw incident data',
+      'Standardized inconsistent state-level schemas',
+      'Produced reusable county-month analytical outputs',
+    ],
     index: '04',
-    tone: 'ink',
+    githubUrl: 'https://github.com/ishmeet2001/U.S.-Multi-State-Violent-Crime-Analysis',
   },
   {
     name: 'Retail Analytics Pipeline',
     description:
-      '541,909 retail transactions processed through Azure Blob, ADF, Python, BigQuery, dbt, Soda quality checks, and Looker Studio reporting.',
-    image: 'https://raw.githubusercontent.com/ishmeet2001/retail-analytics-pipeline/main/screenshots/dashboard.png',
-    imageAlt: 'Retail Analytics Executive Dashboard',
-    imageSource:
-      'ishmeet2001/retail-analytics-pipeline — screenshots/dashboard.png',
+      'End-to-end analytics engineering pipeline for 541,909 retail transactions.',
+    stack: ['Azure Data Factory', 'BigQuery', 'dbt', 'Soda', 'Looker Studio'],
+    highlights: [
+      'Built staged ingestion and warehouse transformations',
+      'Added automated data-quality checks',
+      'Published dimensional marts and executive reporting',
+    ],
     index: '05',
-    tone: 'rose',
+    githubUrl: 'https://github.com/ishmeet2001/retail-analytics-pipeline',
   },
   {
     name: 'TeraBite',
     description:
-      'Women in Data datathon project focused on staple-food import resilience and business-oriented analysis.',
-    image: '/images/projects/terabite-placeholder.jpg',
-    imageAlt: 'TeraBite project visual placeholder',
+      'Datathon analysis exploring staple-food import resilience and business risk.',
+    stack: ['Python', 'pandas', 'Analytics', 'Visualization'],
+    highlights: [
+      'Translated trade data into a business resilience question',
+      'Compared exposure across staple-food categories',
+      'Focused the final story on decision-useful findings',
+    ],
     index: '06',
-    tone: 'ochre',
   },
 ];
