@@ -21,7 +21,7 @@ export const featuredProjects: Project[] = [
     index: '01',
   },
   {
-    name: 'Avocado & Tomato Price Forecasting',
+    name: 'GroceryCast',
     description:
       'Forecasts monthly Canadian produce prices using market and external signals.',
     stack: ['Python', 'Airflow', 'XGBoost', 'SARIMA / SARIMAX', 'pandas'],
